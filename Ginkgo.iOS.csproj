@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAFDE3EB-3531-4583-95B5-1BEFB9B40021}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ginkgo.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Ginkgo.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer\CustomAllViewCellRendereriOS.cs" />
+    <Compile Include="Renderer\CustomTimePicker24HRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
+      <Version>2.0.11</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.1.4.168</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.697729</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Ginkgo\Ginkgo.csproj">
+      <Project>{C933A57F-8D7C-4C99-98BD-E6B71B7C29A7}</Project>
+      <Name>Ginkgo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Cross\CrossUtils\CrossUtils.csproj">
+      <Project>{7EF83931-BB5F-41FD-8987-60B5C58FA3CB}</Project>
+      <Name>CrossUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Cross\Modules.Cross\Modules.Cross.csproj">
+      <Project>{7ABDBFCF-0981-4DE9-8CFD-E336ABDB19E0}</Project>
+      <Name>Modules.Cross</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add_dark_100.png" />
+    <BundleResource Include="Resources\add_dark%402x.png" />
+    <BundleResource Include="Resources\add_light_100.png" />
+    <BundleResource Include="Resources\add_light%402x.png" />
+    <BundleResource Include="Resources\alphabetical_sorting_dark_100.png" />
+    <BundleResource Include="Resources\alphabetical_sorting_dark%402x.png" />
+    <BundleResource Include="Resources\alphabetical_sorting_light_100.png" />
+    <BundleResource Include="Resources\alphabetical_sorting_light%402x.png" />
+    <BundleResource Include="Resources\binders_folder_dark_100.png" />
+    <BundleResource Include="Resources\binders_folder_dark%402x.png" />
+    <BundleResource Include="Resources\binders_folder_light_50.png" />
+    <BundleResource Include="Resources\binders_folder_light_100.png" />
+    <BundleResource Include="Resources\binders_folder_light%402x.png" />
+    <BundleResource Include="Resources\calendar_dark_50.png" />
+    <BundleResource Include="Resources\calendar_dark_100.png" />
+    <BundleResource Include="Resources\calendar_dark%402x.png" />
+    <BundleResource Include="Resources\calendar_light_50.png" />
+    <BundleResource Include="Resources\calendar_light_100.png" />
+    <BundleResource Include="Resources\calendar_light%402x.png" />
+    <BundleResource Include="Resources\camera_dark_100.png" />
+    <BundleResource Include="Resources\camera_dark%402x.png" />
+    <BundleResource Include="Resources\camera_light_100.png" />
+    <BundleResource Include="Resources\camera_light%402x.png" />
+    <BundleResource Include="Resources\cancel_dark_100.png" />
+    <BundleResource Include="Resources\cancel_dark%402x.png" />
+    <BundleResource Include="Resources\cancel_light_100.png" />
+    <BundleResource Include="Resources\cancel_light%402x.png" />
+    <BundleResource Include="Resources\chat_dark_50.png" />
+    <BundleResource Include="Resources\chat_dark_100.png" />
+    <BundleResource Include="Resources\chat_dark%402x.png" />
+    <BundleResource Include="Resources\chat_light_50.png" />
+    <BundleResource Include="Resources\chat_light_100.png" />
+    <BundleResource Include="Resources\chat_light%402x.png" />
+    <BundleResource Include="Resources\comment_discussion_dark_100.png" />
+    <BundleResource Include="Resources\comment_discussion_dark%402x.png" />
+    <BundleResource Include="Resources\comment_discussion_light_100.png" />
+    <BundleResource Include="Resources\comment_discussion_light%402x.png" />
+    <BundleResource Include="Resources\contact_dark_100.png" />
+    <BundleResource Include="Resources\contact_dark%402x.png" />
+    <BundleResource Include="Resources\contact_light_50.png" />
+    <BundleResource Include="Resources\contact_light_100.png" />
+    <BundleResource Include="Resources\contact_light%402x.png" />
+    <BundleResource Include="Resources\folder_dark_100.png" />
+    <BundleResource Include="Resources\folder_dark%402x.png" />
+    <BundleResource Include="Resources\folder_light_100.png" />
+    <BundleResource Include="Resources\folder_light%402x.png" />
+    <BundleResource Include="Resources\image_dark_100.png" />
+    <BundleResource Include="Resources\image_dark%402x.png" />
+    <BundleResource Include="Resources\image_light_100.png" />
+    <BundleResource Include="Resources\image_light%402x.png" />
+    <BundleResource Include="Resources\information_dark_100.png" />
+    <BundleResource Include="Resources\information_dark%402x.png" />
+    <BundleResource Include="Resources\information_light_100.png" />
+    <BundleResource Include="Resources\information_light%402x.png" />
+    <BundleResource Include="Resources\message_dark_50.png" />
+    <BundleResource Include="Resources\message_dark_70.png" />
+    <BundleResource Include="Resources\message_dark_100.png" />
+    <BundleResource Include="Resources\message_dark%402x.png" />
+    <BundleResource Include="Resources\message_light_50.png" />
+    <BundleResource Include="Resources\message_light_100.png" />
+    <BundleResource Include="Resources\message_light%402x.png" />
+    <BundleResource Include="Resources\page_overview_2_dark_100.png" />
+    <BundleResource Include="Resources\page_overview_2_dark%402x.png" />
+    <BundleResource Include="Resources\page_overview_2_light_100.png" />
+    <BundleResource Include="Resources\page_overview_2_light%402x.png" />
+    <BundleResource Include="Resources\page_overview_3_dark_100.png" />
+    <BundleResource Include="Resources\page_overview_3_dark%402x.png" />
+    <BundleResource Include="Resources\page_overview_3_light_100.png" />
+    <BundleResource Include="Resources\page_overview_3_light%402x.png" />
+    <BundleResource Include="Resources\phone_dark_100.png" />
+    <BundleResource Include="Resources\phone_dark%402x.png" />
+    <BundleResource Include="Resources\phone_light_50.png" />
+    <BundleResource Include="Resources\phone_light_100.png" />
+    <BundleResource Include="Resources\phone_light%402x.png" />
+    <BundleResource Include="Resources\qr_code_dark_100.png" />
+    <BundleResource Include="Resources\qr_code_dark%402x.png" />
+    <BundleResource Include="Resources\qr_code_light_50.png" />
+    <BundleResource Include="Resources\qr_code_light_100.png" />
+    <BundleResource Include="Resources\qr_code_light%402x.png" />
+    <BundleResource Include="Resources\search_dark_100.png" />
+    <BundleResource Include="Resources\search_dark%402x.png" />
+    <BundleResource Include="Resources\search_light_100.png" />
+    <BundleResource Include="Resources\search_light%402x.png" />
+    <BundleResource Include="Resources\settings_light_50.png" />
+    <BundleResource Include="Resources\settings_light_100.png" />
+    <BundleResource Include="Resources\settings_light%402x.png" />
+    <BundleResource Include="Resources\shopping_cart_loaded_dark_100.png" />
+    <BundleResource Include="Resources\shopping_cart_loaded_dark%402x.png" />
+    <BundleResource Include="Resources\shopping_cart_loaded_light_50.png" />
+    <BundleResource Include="Resources\shopping_cart_loaded_light_100.png" />
+    <BundleResource Include="Resources\shopping_cart_loaded_light%402x.png" />
+    <BundleResource Include="Resources\time_span_dark_100.png" />
+    <BundleResource Include="Resources\time_span_dark%402x.png" />
+    <BundleResource Include="Resources\time_span_light_50.png" />
+    <BundleResource Include="Resources\time_span_light_100.png" />
+    <BundleResource Include="Resources\time_span_light%402x.png" />
+    <BundleResource Include="Resources\user_dark_50.png" />
+    <BundleResource Include="Resources\user_dark_100.png" />
+    <BundleResource Include="Resources\graule-schweif.png" />
+    <BundleResource Include="Resources\hourglass.jpg" />
+    <BundleResource Include="Resources\kabel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderer\" />
+  </ItemGroup>
+</Project>
